@@ -11,72 +11,56 @@
  */
 class Solution {
 public:
+    TreeNode *prev = NULL;
+    TreeNode *firstViolation = NULL,*secViolation = NULL,*startViolation = NULL;
+    void solve(TreeNode *root) 
+    {
+        if(root == NULL) 
+        {
+            return;
+        }
+        
+        solve(root->left);
+        
+        if(firstViolation == NULL && prev != NULL && prev->val > root->val) 
+        {
+            startViolation = prev;
+            firstViolation = root;
+            // cout<<"start:"<<startViolation->val<<" first:"<<firstViolation->val<<endl;
+        }
+        if(firstViolation != NULL && firstViolation->val > root->val) 
+        {
+            secViolation = root;
+            // cout<<" second:"<<secViolation->val<<endl;
+        }
+        
+        prev = root;
+        solve(root->right);
+        
+    }
     
+    void swap(int *x,int *y) 
+    {
+        int temp = *x;
+        *x = *y;
+        *y = temp;
+        
+    }
     
     void recoverTree(TreeNode* root) {
-        TreeNode *cur = root;
         
-        vector<int> inOrder;
-        //Doing morris traversal for getting Inorder.
-        while(cur) 
+        solve(root);
+        // cout<<"start:"<<startViolation->val<<" first:"<<firstViolation->val<<" "<<endl;
+        // if(secViolation != NULL)    
+            // cout<<"Second: "<<secViolation->val<<endl;
+        if(secViolation) 
         {
-            if(cur->left == NULL) 
-            {
-                inOrder.push_back(cur->val);
-                cur = cur->right;
-            }
-            else
-            {
-                TreeNode *pred = cur->left;
-                while(pred->right != NULL && pred->right != cur) 
-                {
-                    pred = pred->right;
-                }
-                if(pred->right == NULL) 
-                {
-                    pred->right = cur;
-                    cur = cur->left;
-                }
-                else 
-                {
-                    pred->right = NULL; 
-                    inOrder.push_back(cur->val);
-                    cur = cur->right;
-                }
-            }
+            swap(&startViolation->val,&secViolation->val);
         }
-        
-        sort(inOrder.begin(),inOrder.end()); // Sorting to get correct BST.
-        int ind = 0;
-        cur = root;
-        //again doing morris traversal for correcting BST.
-        while(cur) 
+        else
         {
-            if(cur->left == NULL) 
-            {
-                cur->val = inOrder[ind++];
-                cur = cur->right;
-            }
-            else
-            {
-                TreeNode *pred = cur->left;
-                while(pred->right != NULL && pred->right != cur) 
-                {
-                    pred = pred->right;
-                }
-                if(pred->right == NULL) 
-                {
-                    pred->right = cur;
-                    cur = cur->left;
-                }
-                else 
-                {
-                    pred->right = NULL; 
-                    cur->val = inOrder[ind++];
-                    cur = cur->right;
-                }
-            }
+            swap(&startViolation->val,&firstViolation->val);
         }
-        
+           
     }
 };
