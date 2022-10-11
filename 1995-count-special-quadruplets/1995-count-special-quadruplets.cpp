@@ -7,24 +7,23 @@ public:
 //         {
 //             mp[nums[i]]++;
 //         }
-        
-        int cnt = 0;
-        for(int i=0;i<N;i++) 
+        unordered_map<int,int> count;
+        count[nums[N-1]-nums[N-2]] = 1;
+        int res = 0;
+        for(int b=N-3;b>=1;b--) 
         {
-            for(int j=i+1;j<N;j++) 
+            for(int a=b-1;a>=0;a--)     
             {
-                for(int k=j+1;k<N;k++) 
-                {
-                    int sum = nums[i]+nums[j]+nums[k];
-                    for(int l = k+1;l<N;l++) 
-                    {
-                        if(sum == nums[l])
-                            cnt++;
-                    }
-                }
+                res += count[nums[a]+nums[b]];
+            }    
+            
+            for(int x = N-1;x>b;x--) 
+            {
+                count[nums[x]-nums[b]]++;
             }
+            
         }
         
-        return cnt;
+        return res;
     }
 };
