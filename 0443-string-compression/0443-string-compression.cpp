@@ -15,7 +15,7 @@ public:
         char prev = '!';
         string path = "";
         bool flag = true;
-        for(auto i:chars) 
+        for(auto i:s) 
         {
             if(i != prev) 
             {
