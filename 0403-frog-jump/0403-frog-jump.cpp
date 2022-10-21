@@ -1,39 +1,60 @@
 class Solution {
 public:
-    bool solve(int ind,int N,vector<int> &stones,int lastJump,vector<vector<int>> &dp) 
-    {
-        if(ind == 0)
-            return true;
-        bool flag = false;
-        for(int j=0;j<ind;j++) 
-        {
-            int dist = stones[ind]-stones[j];
-            if(dist < 0 || dist > N || !dp[j][dist]) continue;
-
-            if(dist-1 >= 0)
-                dp[ind][dist-1] = true;
-            if(dist+1 <= N) 
-                dp[ind][dist+1] = true;
-            dp[ind][dist] = true;
-            flag = true;
-            if(solve(ind-1,N,stones,dist,dp)) 
-                return dp[ind][lastJump] = true;
-        }
-        return dp[ind][lastJump] = flag;
-    }
+    //Recursive Solution :- 
+//     class Solution {
+// public:
+//     bool solve(int ind,int N,vector<int> &stones,int lastJump,vector<vector<int>> &dp) 
+//     {
+//         if(ind >= N) 
+//             return false;
+//         if(ind == N-1)
+//             return true;
+//         // cout<<stones[ind]<<" "<<lastJump<<endl;
+//         if(dp[ind][lastJump] != -1) 
+//             return dp[ind][lastJump];
+        
+//         bool flag = false;
+//         for(int i=lastJump-1;i<=lastJump+1;i++) 
+//         {
+//             int k = ind+1;
+//             while(k < N) 
+//             {
+//                 if(stones[ind]+i == stones[k]) 
+//                 {
+//                     if(solve(k,N,stones,i,dp))
+//                     {
+//                         flag = true;
+//                         return dp[ind][lastJump] = true;
+//                     }
+//                 }
+//                 k++;
+//             }
+//             if(flag == true)
+//             {
+//                 break;
+//             }
+//         }
+        
+//         return dp[ind][lastJump] = flag;
+//     }
     
+//     bool canCross(vector<int>& stones) {
+//         if(stones[1] != 1) 
+//             return false;
+//         int N = stones.size();
+//         vector<vector<int>> dp(N+1,vector<int>(N+1,-1));
+        
+        
+//         return solve(1,stones.size(),stones,1,dp);
+//     }
+// };
     bool canCross(vector<int>& stones) {
         if(stones[1] != 1) 
             return false;
         int N = stones.size();
         vector<vector<int>> dp(N+1,vector<int>(N+1,0));
-        // return solve(1,stones.size(),stones,1,dp);
         dp[0][1] = true;
-        // return solve(N-1,N,stones,N-1,dp);
-// //         dp[0][1] = true;
         
-// //         for()
-        // dp[]
         for(int i=1;i<N;i++) 
         {
             for(int j=0;j<i;j++) 
