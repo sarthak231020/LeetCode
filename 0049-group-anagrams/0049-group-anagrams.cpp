@@ -4,16 +4,34 @@ public:
         vector<vector<string>> ans;
     
         // unordered_
-        map<map<char,int>,vector<string>> mp;
+//         map<map<char,int>,vector<string>> mp;
         
-        for(auto i:strs) 
+//         for(auto i:strs) 
+//         {
+//             map<char,int> freqChars;
+//             for(auto j:i) 
+//             {
+//                 freqChars[j]++;
+//             }
+//             mp[freqChars].push_back(i);
+//         }
+        
+//         for(auto i:mp) 
+//         {
+//             ans.push_back(i.second);
+//         }
+        
+//         return ans;
+        
+        map<vector<int>,vector<string>> mp;
+        for(auto str:strs) 
         {
-            map<char,int> freqChars;
-            for(auto j:i) 
+            vector<int> count(26,0);
+            for(auto chars:str) // get the frequency of characters 
             {
-                freqChars[j]++;
+                count[chars-'a']++;
             }
-            mp[freqChars].push_back(i);
+            mp[count].push_back(str); //store the string which have same frequencies of characters.
         }
         
         for(auto i:mp) 
