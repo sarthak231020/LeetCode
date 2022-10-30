@@ -58,7 +58,7 @@ public:
             int x = t[0];
             int y = t[1];
             int steps = t[2];
-            int obstacles = t[3];
+            int obstacles = t[3]; //Obstacles we can still able to remove.
             q.pop();
             if(x == -1 || y == -1 || x == R || y == C) 
                 continue;
@@ -68,7 +68,7 @@ public:
             {
                 if(obstacles >= 1) 
                     obstacles--;
-                else
+                else  // In this case we are completely blocked.
                     continue;
             }
             if(visited[x][y] != -1 && visited[x][y] >= obstacles) 
@@ -82,8 +82,6 @@ public:
             q.push({x+1,y,steps+1,obstacles});
         }
         
-        if(ans == INT_MAX)
-            return -1;
-        return ans;
+        return -1;
     }
 };
