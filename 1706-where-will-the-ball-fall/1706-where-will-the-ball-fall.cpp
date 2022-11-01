@@ -29,10 +29,8 @@ public:
                 
                 if((J>=0 && J<N) && (grid[x][y] == grid[x][J])) 
                     q.push({B,{x+1,J}});
-            }
-            
+            }   
         }
-        
         return ans;
     }
 };
