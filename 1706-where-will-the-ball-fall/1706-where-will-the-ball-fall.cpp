@@ -25,7 +25,9 @@ public:
             }
             else 
             {
-                int J = grid[x][y]+y;
+                int J = grid[x][y]+y; //in case -1 check for prev position if prev == +1 (grid[x][y] != grid[x]                                       //[J]) there will be coliision since \/ formed. else no collision both / / 
+                                      //Similarly in case +1 check for next position if next val = -1 collision 
+                                      //else No Collision \ \ both are going rightwards.
                 
                 if((J>=0 && J<N) && (grid[x][y] == grid[x][J])) 
                     q.push({B,{x+1,J}});
