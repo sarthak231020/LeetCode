@@ -11,20 +11,57 @@
  */
 class Solution {
 public:
-    void dfs(TreeNode *root,int &cnt)
+    // O(N) - Bruteforce Solution Using Inorder
+//     void dfs(TreeNode *root,int &cnt)
+//     {
+//         if(root == NULL) 
+//             return;
+        
+//         cnt++;
+//         dfs(root->left,cnt);
+//         dfs(root->right,cnt);
+        
+//     }
+    
+    int height(TreeNode *root,bool l) 
     {
-        if(root == NULL) 
-            return;
-        
-        cnt++;
-        dfs(root->left,cnt);
-        dfs(root->right,cnt);
-        
-    }
-    int countNodes(TreeNode* root) {
         int cnt = 0;
-        dfs(root,cnt);
+        if(l)
+        {
+            while(root)
+            {
+                root = root->left;
+                cnt++;
+            }
+        }
+        else 
+        {
+            while(root)
+            {
+                root = root->right;
+                cnt++;
+            }
+        }
         return cnt;
+    }
+    
+    int dfs(TreeNode *root) 
+    {
+        if(root == NULL)
+            return 0;
+        
+        int lh = height(root,true);
+        int rh = height(root,false);
+        if(lh == rh) 
+        {
+            return (1<<lh)-1;
+        }
+        return 1+dfs(root->left)+dfs(root->right);
+    } 
+    
+    int countNodes(TreeNode* root) {
+        
+        return dfs(root);
         
     }
 };
