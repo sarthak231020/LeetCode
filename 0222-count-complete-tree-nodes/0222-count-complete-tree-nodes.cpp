@@ -11,7 +11,8 @@
  */
 class Solution {
 public:
-    // O(N) - Bruteforce Solution Using Inorder
+     // Bruteforce Solution Using Inorder
+    // TC - O(N) SC - O(logN)(Since Complete BT).
 //     void dfs(TreeNode *root,int &cnt)
 //     {
 //         if(root == NULL) 
@@ -23,6 +24,7 @@ public:
         
 //     }
     
+    //Optimized Solution TC -> O((logN)^2)(since we are calculating height of left and height of right cubtree Takes O(logN) and at worst we are calculating it for logN nodes). SC->O(logN) 
     int height(TreeNode *root,bool l) 
     {
         int cnt = 0;
