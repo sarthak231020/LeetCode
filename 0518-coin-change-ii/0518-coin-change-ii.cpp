@@ -110,7 +110,7 @@ public:
         return solveTabulated(amount,coins);
         */
         
-        /*TC :- O(N) SC:-(2*amount)*/
+        /*TC :- O(N*amount) SC:-(2*amount)*/
         return solveTabulatedSpaceOpt(amount,coins);
         
     }
