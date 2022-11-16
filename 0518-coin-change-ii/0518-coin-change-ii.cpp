@@ -59,16 +59,59 @@ public:
         
     }
     
+    int solveTabulatedSpaceOpt(int amount, vector<int>& coins)
+    {
+        // cout<<"NEXT"<<endl;
+        int n = coins.size();
+        vector<int> prev(amount+1,0),curr(amount+1,0);
+        
+        //for all amount as 0 we should fill 1 since we are able to generate it no matter what.
+        
+        prev[0] = 1; 
+        for(int amt = 1; amt <= amount; amt++) 
+        {
+            if(amt%coins[0] == 0) 
+                prev[amt] = 1;
+            else
+                prev[amt] = 0;
+        }
+        
+        for(int ind=1;ind<n;ind++)
+        {
+            curr[0] = 1;
+            for(int amt = 1;amt<=amount;amt++) 
+            {
+                int pick = 0;
+                if(coins[ind] <= amt)
+                {
+                    pick = curr[amt-coins[ind]];
+                }
+                int notPick = prev[amt];
+
+                curr[amt] = pick+notPick;
+                // cout<<ind<<" "<<amt<<" "<<min(pick,notPick)<<endl; 
+            }
+            prev = curr;
+        }
+        
+        return prev[amount];
+        
+    }
+    
     int change(int amount, vector<int>& coins) {
-        /* FOR MEMOIZED CODE :- TC :- O(N) since
+        /* FOR MEMOIZED CODE :- TC :- O(N*amount) SC :- O(N*amount)+O(stackSpace)
         int n = coins.size();
         vector<vector<int>> dp(n,vector<int> (amount+1,-1));
         return solve(n-1,amount,coins,dp);
         */
         
+        /*TC :- O(N*amount) SC :- O(N*amount).
         //Tabulated Code:-
-        
         return solveTabulated(amount,coins);
+        */
+        
+        /*TC :- O(N) SC:-(2*amount)*/
+        return solveTabulatedSpaceOpt(amount,coins);
         
     }
 };
