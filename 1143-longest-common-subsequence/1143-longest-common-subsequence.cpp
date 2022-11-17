@@ -1,48 +1,74 @@
 class Solution {
 public:
+    int solve(int ind1,int ind2,string text1,string text2,vector<vector<int>> &dp)
+    {
+        if(ind1 == -1 || ind2 ==-1) 
+        {
+            return 0;
+        
+            // if(ind1==0) 
+            // {
+            //     while(ind2>=0) 
+            //     {
+            //         if(text2[ind2] == text1[ind1])
+            //             return 1;
+            //         ind2--;
+            //     }
+            //     return 0;
+            // }
+            // if(ind2==0) 
+            // {
+            //     while(ind1>=0) 
+            //     {
+            //         if(text2[ind2] == text1[ind1])
+            //             return 1;
+            //         ind1--;
+            //     }
+            //     return 0;
+            // }
+        }
+        if(dp[ind1][ind2] != -1) 
+            return dp[ind1][ind2];
+        
+        int match = INT_MIN,misMatch = INT_MIN;
+        if(text1[ind1] == text2[ind2]) 
+            match = 1+solve(ind1-1,ind2-1,text1,text2,dp);
+        else 
+        {
+            misMatch = max(solve(ind1-1,ind2,text1,text2,dp),solve(ind1,ind2-1,text1,text2,dp));
+        }
+        
+        return dp[ind1][ind2] = max(match,misMatch);
+        
+    }
     
     int longestCommonSubsequence(string text1, string text2) {
-        int N = text1.size();
-        int M = text2.size();
-//         vector<vector<int>> dp(N+1,vector<int>(M+1,-1));
+        int n1 = text1.size(),n2= text2.size();
+        // cout<<"NEXT"<<endl;
+        /*
+        vector<vector<int>> dp(text1.size()+1,vector<int> (text2.size()+1,-1));
+        return solve(n1-1,n2-1,text1,text2,dp);
+        */
+        vector<vector<int>> dp(n1+1,vector<int> (n2+1,0));
         
-//         for(int i=0;i<=N;i++) 
-//         {
-//             dp[i][0] = 0;
-//         }
-//         for(int j=0;j<=M;j++) 
-//         {
-//             dp[0][j] = 0;
-//         }
-        
-        
-//         for(int i=1;i<=N;i++) 
-//         {
-//             for(int j=1;j<=M;j++) 
-//             {
-//                 if(text1[i-1] == text2[j-1]) 
-//                     dp[i][j] = 1+dp[i-1][j-1];
-//                 else 
-//                     dp[i][j] = max(dp[i-1][j],dp[i][j-1]);
-//             }
-//         }
-//         return dp[N][M];
-        
-        //Space Optimized Code :- 
-        vector<int> prev(M+1,0);
-        vector<int> curr(M+1,0);
-        for(int i=1;i<=N;i++) 
+        for(int ind1=1;ind1<=n1;ind1++) 
         {
-            for(int j=1;j<=M;j++) 
+            for(int ind2=1;ind2<=n2;ind2++) 
             {
-                if(text1[i-1] == text2[j-1]) 
-                    curr[j] = 1+prev[j-1];
+                int match = INT_MIN,misMatch = INT_MIN;
+                if(text1[ind1-1] == text2[ind2-1]) 
+                {
+                    match = 1+dp[ind1-1][ind2-1];
+                }
                 else 
-                    curr[j] = max(prev[j],curr[j-1]);
+                {
+                    misMatch = max(dp[ind1-1][ind2],dp[ind1][ind2-1]);
+                }
+                dp[ind1][ind2] = max(match,misMatch);
             }
-            prev = curr;
         }
-        return curr[M];
         
+        
+        return dp[n1][n2];
     }
 };
