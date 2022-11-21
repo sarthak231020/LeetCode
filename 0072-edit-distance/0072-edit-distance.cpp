@@ -53,9 +53,9 @@ public:
                 {
                     int ans = 0;
 
-                    int insert = 1+solve(i,j-1,s1,s2,dp); // we have inserted the char just after the ith index in s1 so i will remain at same position and since we obviously inserted the s2[j] character so we have matched the s1[i+1] && s2[j] (hypothetically i.e. we are not inserting anything here).
-                    int del = 1 + solve(i-1,j,s1,s2,dp); // since we have deleted s1[i] so just move the i since we still want a match to j.  (hypothetically i.e. we are not deleting anything here).
-                    int replace = 1 + solve(i-1,j-1,s1,s2,dp); // since we have replaced the s1[i] by s2[j] so just move both the indices i-1,j-1.
+                    int insert = 1+dp[i][j-1]; // we have inserted the char just after the ith index in s1 so i will remain at same position and since we obviously inserted the s2[j] character so we have matched the s1[i+1] && s2[j] (hypothetically i.e. we are not inserting anything here).
+                    int del = 1 + dp[i-1][j]; // since we have deleted s1[i] so just move the i since we still want a match to j.  (hypothetically i.e. we are not deleting anything here).
+                    int replace = 1 +dp[i-1][j-1]; // since we have replaced the s1[i] by s2[j] so just move both the indices i-1,j-1.
 
                     ans = min(insert,min(del,replace));
                     dp[i][j] = ans;
@@ -65,6 +65,42 @@ public:
         return dp[n1][n2];
     }
     
+    int solveTabulatedSpaceOpt(string &s1,string &s2,int n1,int n2)  
+    {
+        vector<int> prev(n2+1,0),curr(n2+1,0);
+        
+        
+        for(int j=0;j<=n2;j++) 
+        {
+            prev[j] = j;
+        }
+        
+        for(int i=1;i<=n1;i++) 
+        {
+            curr[0] = i;
+            for(int j=1;j<=n2;j++) 
+            {
+                if(s1[i-1] == s2[j-1]) 
+                {
+                    curr[j] = prev[j-1]; //this means we have to do nothing since it is already a match.
+                }
+                else
+                {
+                    int ans = 0;
+
+                    int insert = 1 + curr[j-1]; // we have inserted the char just after the ith index in s1 so i will remain at same position and since we obviously inserted the s2[j] character so we have matched the s1[i+1] && s2[j] (hypothetically i.e. we are not inserting anything here).
+                    int del = 1 + prev[j]; // since we have deleted s1[i] so just move the i since we still want a match to j.  (hypothetically i.e. we are not deleting anything here).
+                    int replace = 1 + prev[j-1]; // since we have replaced the s1[i] by s2[j] so just move both the indices i-1,j-1.
+
+                    ans = min(insert,min(del,replace));
+                    curr[j] = ans;
+                }
+            }
+            prev = curr;
+        }
+        return prev[n2];
+    }
+    
     int minDistance(string s1, string s2) {
         
         int n1 = s1.size();
@@ -72,6 +108,8 @@ public:
         // vector<vector<int>> dp(n1+1,vector<int> (n2+1,-1));
         // return solve(n1-1,n2-1,s1,s2,dp);
         
-        return solveTabulated(s1,s2,n1,n2);
+        // return solveTabulated(s1,s2,n1,n2);
+        
+        return solveTabulatedSpaceOpt(s1,s2,n1,n2);
     }
 };
