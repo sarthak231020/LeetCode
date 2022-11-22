@@ -123,6 +123,35 @@ public:
         return nex[1]; // as we know we are passing 1 initially.       
     }
     
+    int solveDpVar(vector<int> &prices) 
+    {
+        int n = prices.size();
+        
+        int nextBuy,nextNotBuy,currBuy,currNotBuy;
+        
+        //Converting the base case.
+        nextBuy = 0;
+        nextNotBuy = 0; 
+        
+        for(int i=n-1;i>=0;i--)
+        {
+             // first case we are buying it using it's price so -prices[i] and going forward to not buy it again
+            //Second Case we are not buying and can buy other stocks(passing buy = 1).
+            
+            currBuy = max(-prices[i]+nextNotBuy,0+nextBuy);
+            
+            //again we have two choices either we are selling it now pr may be we will sell it later.
+            //First case we allow to buy again 
+            //Second Case we won't allow to buy 
+            currNotBuy = max(prices[i]+nextBuy,0+nextNotBuy);
+
+            nextBuy = currBuy;
+            nextNotBuy = currNotBuy;
+        }
+        
+        return nextBuy; // as we know we are passing 1 initially.       
+    }
+    
     
     int maxProfit(vector<int>& prices) {
         
@@ -136,7 +165,10 @@ public:
         // return solveDpTabulated(prices);
         
         //Space Optimized Solution :- TC :- O(N*2) SC:- O(1). 
-        return solveDpTabulatedSpaceOpt(prices);
+        // return solveDpTabulatedSpaceOpt(prices);
+        
+        //Space Optimized Variable Solution :- TC :- O(N) SC:- O(1).
+        return solveDpVar(prices);
         
     }
 };
