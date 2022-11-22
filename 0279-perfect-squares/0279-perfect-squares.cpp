@@ -31,14 +31,14 @@ public:
     int numSquares(int n) {
         vector<int> perSq; // an array which will have perfect squares stored. 
         
-        for(int i=1;i<=100;i++) 
+        for(int i=1;i*i<=n;i++) 
         {
             perSq.push_back(i*i);
         }
         
-        vector<vector<int>> dp(100,vector<int> (n+1,-1));
+        vector<vector<int>> dp(perSq.size(),vector<int> (n+1,-1));
         
-        return solve(99,n,perSq,dp);
+        return solve(perSq.size()-1,n,perSq,dp);
         
 //         int ans = 0;
 //         for(int i=99;i>=0;i--) 
