@@ -30,10 +30,10 @@ public:
         
     }
     
-    int solve2dDpTabulated(vector<int> &prices) 
+    int solve2dDpTabulated(vector<int> &prices,int fee) 
     {
         int n = prices.size();
-        vector<vector<int>> dp(n+2,vector<int> (2,0));
+        vector<vector<int>> dp(n+1,vector<int> (2,0));
         
         //No need to write the base cases since we are already filling the dp array with 0s.
         
@@ -55,7 +55,7 @@ public:
                     //1st case -> sell is completed so from next stock we are allowed to buy.
                     //2nd case -> we are not selling the stock now we are not allowed to buy any other stock.
                     
-                    profit = max(prices[i]+dp[i+2][1]
+                    profit = max(prices[i]-fee+dp[i+1][1]
                              ,0+dp[i+1][0]);
                 }
 
