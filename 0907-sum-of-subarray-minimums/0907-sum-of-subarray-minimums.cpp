@@ -29,7 +29,7 @@ public:
         }
         for(int i=N-1;i>=0;i--) 
         {
-            while(!st.empty() && arr[st.top()] > arr[i]) 
+            while(!st.empty() && arr[st.top()] > arr[i])  // using only > sign to avoid the considering duplicates for answer.[71,55,82,55] -> dulicates subarray [55,82,55] & [71,55,82,55] if we use >= sign here we will end up considering these subarrays twice.
             {
                 st.pop();
             }
