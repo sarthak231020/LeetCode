@@ -62,6 +62,30 @@ public:
         return next[0];
     }
     
+    int solveOpt(vector<int> &nums) 
+    {
+        int N = nums.size();
+        vector<int> dp(N,1);
+        for(int i=0;i<N;i++) 
+        {
+            for(int j=0;j<i;j++) 
+            {
+                if(nums[j] < nums[i]) 
+                {
+                    dp[i] = max(dp[i],1+dp[j]);
+                }
+            }
+        }
+        int maxi = INT_MIN; 
+        for(auto i:dp) 
+        {
+            maxi = max(maxi,i);
+        }
+        
+        return maxi;
+    }
+    
+    
     int lengthOfLIS(vector<int>& nums) {
         // cout<<"NEXT"<<endl;
         // vector<vector<int>> dp(nums.size()+1,vector<int> (nums.size()+1,-1));
@@ -71,6 +95,8 @@ public:
         // return solveTabulated(nums);
         
         //Space Optimizd TC :- O(N*N) SC:- O(2*N)
-        return solveTabulatedSpaceOpt(nums);
+        // return solveTabulatedSpaceOpt(nums);
+        
+        return solveOpt(nums);
     }
 };
