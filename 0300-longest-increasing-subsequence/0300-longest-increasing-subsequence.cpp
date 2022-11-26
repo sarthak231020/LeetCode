@@ -111,6 +111,25 @@ public:
     }
     
     
+    int solveOptBinSearch(vector<int> &nums)
+    {
+        vector<int> temp;
+        temp.push_back(nums[0]);
+        for(int i=1;i<nums.size();i++) 
+        {
+            if(nums[i] > temp.back()) 
+            {
+                temp.push_back(nums[i]);
+            }
+            else 
+            {
+                int ind = lower_bound(temp.begin(),temp.end(),nums[i])-temp.begin();
+                temp[ind] = nums[i]; 
+            }
+        }
+        return temp.size();
+    }
+    
     int lengthOfLIS(vector<int>& nums) {
         // cout<<"NEXT"<<endl;
         // vector<vector<int>> dp(nums.size()+1,vector<int> (nums.size()+1,-1));
@@ -122,6 +141,10 @@ public:
         //Space Optimizd TC :- O(N*N) SC:- O(2*N)
         // return solveTabulatedSpaceOpt(nums);
         
-        return solveOpt(nums);
+        // TC :- O(N^2) SC :- O(N).
+        // return solveOpt(nums);
+        
+        // TC :- O(Nlogn) SC:- O(N).
+        return solveOptBinSearch(nums);
     }
 };
