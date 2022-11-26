@@ -65,23 +65,48 @@ public:
     int solveOpt(vector<int> &nums) 
     {
         int N = nums.size();
-        vector<int> dp(N,1);
+        vector<int> dp(N,1),parent(N,0);
+        for(int i=0;i<N;i++) 
+        {
+            parent[i] = i;
+        }
         for(int i=0;i<N;i++) 
         {
             for(int j=0;j<i;j++) 
             {
                 if(nums[j] < nums[i]) 
                 {
-                    dp[i] = max(dp[i],1+dp[j]);
+                    if(dp[i] < 1+dp[j]) 
+                    {
+                        dp[i] = 1+dp[j];
+                        parent[i] = j;
+                    }
                 }
             }
         }
-        int maxi = INT_MIN; 
-        for(auto i:dp) 
+        int maxi = 1;
+        int maxind = 0;
+        for(int i=0;i<N;i++) 
         {
-            maxi = max(maxi,i);
+            if(dp[i] > maxi)
+            {
+                maxi = dp[i];
+                maxind = i;
+            }
         }
-        
+        //To Print the LIS 
+        // vector<int> ans;
+        // while(parent[maxind] != maxind) 
+        // {
+        //     ans.push_back(nums[maxind]);
+        //     maxind = parent[maxind];
+        // }
+        // ans.push_back(nums[maxind]);
+        // for(auto i:ans) 
+        // {
+        //     cout<<i<<" ";
+        // }
+        // cout<<endl;
         return maxi;
     }
     
