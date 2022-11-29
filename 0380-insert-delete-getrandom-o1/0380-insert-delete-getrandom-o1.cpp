@@ -1,37 +1,43 @@
 class RandomizedSet {
+
+private:
+    unordered_map<int,int> mp; //it will store elements and its indices.
+    vector<int> nums; //it will store values.
 public:
     
-    unordered_set<int> st;
     RandomizedSet() {
-        
     }
     
     bool insert(int val) {
-        if(st.find(val) != st.end()) 
+        if(mp.find(val) != mp.end())
+        {//The element is present already
             return false;
-        st.insert(val);
+        }
+        nums.push_back(val);
+        mp[val] = nums.size()-1; 
         return true;
     }
     
     bool remove(int val) {
-        if(st.find(val) != st.end()) 
-        {
-            st.erase(val); 
-            return true;
+        if(mp.find(val) == mp.end()) 
+        {   
+            //Element is not present so unable to delete
+            return false;
         }
-        return false;
+        //We want the deletion in O(1).
+        //Since we don't care about the order of elements.
+        //So pick the last element swap it with curr val and remove.
+        int last = nums.back();
+        int indVal = mp[val];
+        mp[last] = indVal;
+        nums[indVal] = last; //we saved the last element.
+        nums.pop_back();
+        mp.erase(val);
+        return true;
     }
     
     int getRandom() {
-        int ind = rand()%st.size();
-        auto it = st.begin();
-        int i = 0;
-        while(i != ind) 
-        {
-            it++;
-            i++;
-        }
-        return *it;
+        return nums[rand()%nums.size()]; //since it is given that at the time of calling the function we have some elements always so just return the random value
     }
 };
 
