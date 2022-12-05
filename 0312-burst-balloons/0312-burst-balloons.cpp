@@ -17,15 +17,36 @@ public:
         return dp[i][j] = maxi;
     }
     
+    int solveTabulated(vector<int> &nums,int N) 
+    {
+        vector<vector<int>> dp(N+1,vector<int> (N+1,0));
+        
+        for(int i=N;i>=1;i--) 
+        {
+            for(int j=i;j<=N;j++) 
+            {
+                int maxi = INT_MIN;
+                for(int k=i;k<=j;k++) 
+                {
+                    int ans = nums[i-1]*nums[k]*nums[j+1]+solve(i,k-1,nums,dp)+solve(k+1,j,nums,dp);
+                    maxi = max(maxi,ans);
+                }
+                dp[i][j] = maxi;
+            }
+        }
+        return dp[1][N];
+    }
+    
     int maxCoins(vector<int>& nums) {
-        vector<int> v;
-        v.push_back(1); // Just to avoid the complication of calculations.
-        for(auto i:nums)
-            v.push_back(i);
-        v.push_back(1); // Just to avoid the complication of calculations.
         int N = nums.size();
-        vector<vector<int>> dp(N+2,vector<int> (N+2,-1));
-        return solve(1,v.size()-2,v,dp);
+        nums.push_back(1); //Just to avoid complication in calculations.
+        nums.insert(nums.begin(),1); //Just to avoid complication in calculations.
+        /*FOR MEMOIZED CODE -> TC:- O(N^3) SC:-O(N^2)(DP ARRAY)+O(N)(ASS).
+        vector<vector<int>> dp(N+1,vector<int> (N+1,-1));
+        return solve(1,N,nums,dp);
+        */
+        //Tabulated Code :- TC->O(N^3). SC->O(N^2)(DP ARRAY).
+        return solveTabulated(nums,N);
         
     }
 };
