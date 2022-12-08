@@ -75,9 +75,37 @@ public:
         
     }
     
+    int solveOpt(vector<int> &heights) 
+    {
+        stack<int> st;
+        int N = heights.size();
+        int maxArea = INT_MIN;
+        for(int i=0;i<=N;i++) 
+        {  
+            while(!st.empty() && (i==N || heights[st.top()] >= heights[i]))
+            {
+                int ele = heights[st.top()]; 
+                st.pop();
+                int width;
+                if(st.empty()) 
+                    width = i; 
+                else 
+                    width = i-st.top()-1;
+                maxArea = max(maxArea,ele*width);
+            }
+            st.push(i);   
+        }
+        
+        return maxArea;
+    }
+    
+    
+    
     int largestRectangleArea(vector<int>& heights) {
         
-        return solveBetter(heights);
+        // return solveBetter(heights);
+        
+        return solveOpt(heights);
         
     }
 };
