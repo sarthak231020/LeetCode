@@ -1,55 +1,32 @@
 class Solution {
 public:
     bool wordPattern(string pattern, string s) {
+        unordered_map<char,int> patternToInt;
+        unordered_map<string,int> wordToInt;
+        
+        // cout<<patternToInt['a']<<endl; // if key doesn't exist it will return 0.
         istringstream ss(s);
-        string word;
-        vector<string> v;
-        while(ss >> word) 
-        {
-            v.push_back(word);
-        }
-        for(auto i:v) 
-        {
-            cout<<i<<" ";
-        }
-        cout<<endl;
-        unordered_map<char,string> mp;
-        for(int i=0;i<pattern.size();i++) 
-        {
-            if(mp.find(pattern[i]) != mp.end()) 
-            {
-                if(mp[pattern[i]] != v[i]) 
-                    return false;
-            }
-            else 
-            {
-                mp[pattern[i]] = v[i];
-            }
-        }
+        int i=0,n=pattern.size();
         
-        unordered_map<string,char> mp2;
-        
-        for(int i=0;i<v.size();i++) 
+        for(string word;ss>>word;++i) 
         {
-            if(mp2.find(v[i]) != mp2.end()) 
+            // case 1 -> words are not expired but the pattern is expired so return false 
+            //case 2 -> there is a mismatch 
+            // consider this like example 2
+            // a->1 dog -> 1 
+            // b->2 cat -> 2
+            // b ->3 cat-> 3 
+            // a->1 fish-> 0 mismatch(breaks the rule of bijection) so return false.
+            
+            
+            if(i == n || patternToInt[pattern[i]] != wordToInt[word])
             {
-                if(mp2[v[i]] != pattern[i]) 
-                    return false;
-            }
-            else 
-            {
-                mp2[v[i]] = pattern[i];
-            }
-        }
-        
-        
-        for(auto i:mp) 
-        {
-            if(i.first != mp2[i.second])
                 return false;
+            }
+            
+            patternToInt[pattern[i]] = wordToInt[word] = i+1;
         }
         
-        
-        return true;
+        return i == n;
     }
 };
