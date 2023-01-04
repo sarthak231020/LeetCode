@@ -1,21 +1,21 @@
 class Solution {
 public:
     int minDeletionSize(vector<string>& strs) {
-        int delete_count=0;
-        int row = strs.size();
-        int col = strs[0].size();
-        
-        for(int j=0; j<col; j++)
+        if(strs.size() == 1) 
+            return 0;
+        int cnt = 0;
+        for(int col=0;col<strs[0].size();col++)  // col will be iterating through the cols
         {
-            for(int i=0; i<row-1; i++)
+            for(int row = 1;row<strs.size();row++) 
             {
-                if(strs[i][j]>strs[i+1][j])
+                if(strs[row][col] < strs[row-1][col]) //it means that current gut is smaller than previous one.
                 {
-                    delete_count++;
+                    cnt++;
                     break;
                 }
             }
         }
-        return delete_count;
+        
+        return cnt;
     }
 };
