@@ -31,7 +31,7 @@ public:
 //         return solve(0,sum/2,nums,dp);
         
         //Iterative Code :- Top Down DP 
-        vector<vector<bool>> dp(200+1,vector<bool> (20000+1,-1));
+        vector<vector<bool>> dp(nums.size()+1,vector<bool> (sum/2 + 1,-1));
         int N = nums.size();
         for(int i=0;i<N;i++) 
         {
