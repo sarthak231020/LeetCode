@@ -13,24 +13,27 @@ class Solution {
         
         queue<int> q; 
         q.push(0);
-        while(!q.empty()) 
+        visited[0] = 1; //marking the root node as visited.
+        while(!q.empty())  // O(V) this will run Number vertices times in total.
         {
             int top = q.front(); 
             q.pop();
-            if(visited[top] == 0)
-            {    
-                visited[top] = 1;
-                ans.push_back(top); 
-                for(auto i:adj[top]) 
+            ans.push_back(top); 
+            for(auto i:adj[top]) //-> this will run for O(2*E) total no. of degree times.
+            {
+                if(visited[i] != 1)
                 {
-                    if(visited[i] != 1)
-                        q.push(i);
+                    visited[i] = 1;
+                    q.push(i);
                 }
             }
+            
         }
         return ans;
         
         // Code here
+        // TC -> O(V) + O(2*E)
+        // SC -> O(3*V) => O(V).
     }
 };
 
