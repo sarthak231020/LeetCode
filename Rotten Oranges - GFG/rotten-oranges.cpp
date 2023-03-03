@@ -15,7 +15,7 @@ class Solution
         vector<vector<int>> visited(N,vector<int> (M)); // So that we will not change the original 
         // It is a good practice to keep the Original data unchanged at the end of the program.
         visited = grid;
-        queue<pair<int,pair<int,int>>> q;
+        queue<pair<pair<int,int>,int>> q; // we will store like (x,y) and time it have taken to get rotten.
         
         for(int i=0;i<N;i++) 
         {
@@ -28,7 +28,7 @@ class Solution
                 else if(grid[i][j] == 2) 
                 {
                     visited[i][j] = 2;
-                    q.push({i,{j,0}}); //Initially Push all the rotten oranges.
+                    q.push({{i,j},0}); //Initially Push all the rotten oranges.
                 }
             }
         }
@@ -39,21 +39,21 @@ class Solution
         // Using the BFS technique
         while(!q.empty())
         {
-            pair<int,pair<int,int>> ele = q.front();
+            pair<pair<int,int>,int> ele = q.front();
             q.pop();
             for(int i=0;i<4;i++) 
             {
                 
-                int x = ele.first;
-                int y = ele.second.first;
-                int curTime = ele.second.second;
-                Time = max(Time,ele.second.second);
+                int x = ele.first.first;
+                int y = ele.first.second;
+                int curTime = ele.second;
+                Time = max(Time,ele.second);
                 int negX = x+dx[i]; // calculating the neighbour index.
                 int negY = y+dy[i]; // calculating the neighbour index.
                 
                 if(negX >= 0 && negX < N && negY >= 0 && negY < M && visited[negX][negY] == 1)
                 {
-                    q.push({negX,{negY,curTime+1}});
+                    q.push({{negX,negY},curTime+1});
                     freshOranges--;
                     visited[negX][negY] = 2; // now marking it as rotten.
                 }
