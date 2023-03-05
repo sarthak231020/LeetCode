@@ -1,6 +1,25 @@
 class Solution {
 public:
     
+    int power(long x,long y)
+    {
+        int MOD = 1e9+7;
+        
+        long res = 1;
+        while(y > 0) 
+        {
+            if(y%2 == 1) // if the power is odd then multiply by x.
+            {
+                res = (res%MOD*x%MOD)%MOD;
+            }
+            y = y/2;
+            x = ((long)(x%MOD*x%MOD))%MOD;
+        }
+        res = res%MOD;
+        
+        return (int)res; 
+    }
+    
     int countWays(vector<vector<int>>& ranges) {
         sort(ranges.begin(),ranges.end());
         // vector<vector<int>> ans;
@@ -18,14 +37,8 @@ public:
                 temp = max(temp,interval[1]);
             }
         }
-        int MOD = 1e9+7;
-        int res = 1;
-        for(int i=0;i<mergeSize;i++) 
-        {
-            res = (res*2)%MOD;
-        }
         
-        return res;
+        return power(2,mergeSize);
         
     }
 };
