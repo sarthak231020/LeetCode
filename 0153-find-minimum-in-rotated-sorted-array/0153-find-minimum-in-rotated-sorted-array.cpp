@@ -13,7 +13,7 @@ public:
                 ans = min(ans,arr[low]);
                 low = mid+1;
             }
-            else if(arr[mid] <= arr[high]) 
+            else
             {
                 ans = min(ans,arr[mid]);
                 high = mid-1;
