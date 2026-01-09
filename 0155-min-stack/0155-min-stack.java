@@ -1,44 +1,46 @@
-class Pair
-{
-    int currVal, minVal;
-
-    Pair(int currVal,int minVal) 
-    {
-        this.currVal = currVal;
-        this.minVal = minVal;
-    }
-}
-
 class MinStack {
-    private Deque<Pair> st;
-    
+    Stack<Long> st;
+    long mini;
     public MinStack() {
-        st = new ArrayDeque<>();
+        st = new Stack<>();
     }
     
     public void push(int val) {
         if(st.isEmpty()) 
         {
-            st.push(new Pair(val,val));
+            st.push(0L);
+            mini = val;
         }
         else
         {
-            st.push(new Pair(val,Math.min(st.peek().minVal,val)));
+            st.push(val-mini);
+            mini = Math.min(val,mini);
         }
     }
     
     public void pop() {
         if(st.isEmpty()) 
             return;
-        st.pop();
+        long poppedEle = st.pop();
+        // This means we popped the current minimum so update it....
+        if(poppedEle < 0) 
+            mini = mini - poppedEle;
     }
     
     public int top() {
-        return st.peek().currVal;
+        long top = st.peek();
+        if(top > 0) 
+        {
+            return (int)(mini + top);
+        }
+        else
+        {
+            return (int)mini;
+        }
     }
     
     public int getMin() {
-        return st.peek().minVal;
+        return (int)mini;
     }
 }
 
