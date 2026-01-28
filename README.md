@@ -163,6 +163,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0543-diameter-of-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/sarthak231020/LeetCode/tree/master/0572-subtree-of-another-tree) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
+| [1448-count-good-nodes-in-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -174,6 +175,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0543-diameter-of-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/sarthak231020/LeetCode/tree/master/0572-subtree-of-another-tree) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
+| [1448-count-good-nodes-in-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -183,6 +185,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0104-maximum-depth-of-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0226-invert-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
+| [1448-count-good-nodes-in-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## Binary Tree
 |  |
 | ------- |
@@ -196,6 +199,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0543-diameter-of-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/sarthak231020/LeetCode/tree/master/0572-subtree-of-another-tree) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
+| [1448-count-good-nodes-in-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## String Matching
 |  |
 | ------- |
