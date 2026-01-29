@@ -24,9 +24,32 @@ class Solution {
         inOrder(root.right,ans);
     }
 
+    public void inOrderOptimal(TreeNode root,int[] k,int[] ans) 
+    {
+        if(root == null) 
+            return;
+        
+        inOrderOptimal(root.left,k,ans);
+        k[0] = k[0]-1;
+        if(k[0] == 0)
+        {
+            ans[0] = root.val;
+            return;
+        }
+        inOrderOptimal(root.right,k,ans);
+    }
+
     public int kthSmallest(TreeNode root, int k) {
-        List<Integer> ans = new ArrayList<>();
-        inOrder(root,ans);
-        return ans.get(k-1);
+        // For Brut
+        // List<Integer> ans = new ArrayList<>();
+        // inOrder(root,ans);
+        // return ans.get(k-1);
+
+        int[] ans = new int[1];
+        int[] kVal = new int[1];
+        ans[0] = -1;
+        kVal[0] = k;
+        inOrderOptimal(root,kVal,ans);
+        return ans[0];
     }
 }
