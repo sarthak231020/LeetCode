@@ -51,6 +51,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0215-kth-largest-element-in-an-array](https://github.com/sarthak231020/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0239-sliding-window-maximum](https://github.com/sarthak231020/LeetCode/tree/master/0239-sliding-window-maximum) |
 | [0347-top-k-frequent-elements](https://github.com/sarthak231020/LeetCode/tree/master/0347-top-k-frequent-elements) |
+| [0540-single-element-in-a-sorted-array](https://github.com/sarthak231020/LeetCode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0621-task-scheduler](https://github.com/sarthak231020/LeetCode/tree/master/0621-task-scheduler) |
 | [0739-daily-temperatures](https://github.com/sarthak231020/LeetCode/tree/master/0739-daily-temperatures) |
 | [0853-car-fleet](https://github.com/sarthak231020/LeetCode/tree/master/0853-car-fleet) |
@@ -126,6 +127,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0081-search-in-rotated-sorted-array-ii](https://github.com/sarthak231020/LeetCode/tree/master/0081-search-in-rotated-sorted-array-ii) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/sarthak231020/LeetCode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/sarthak231020/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
+| [0540-single-element-in-a-sorted-array](https://github.com/sarthak231020/LeetCode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0875-koko-eating-bananas](https://github.com/sarthak231020/LeetCode/tree/master/0875-koko-eating-bananas) |
 | [1004-max-consecutive-ones-iii](https://github.com/sarthak231020/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 ## Matrix
