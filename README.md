@@ -64,6 +64,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1283-find-the-smallest-divisor-given-a-threshold](https://github.com/sarthak231020/LeetCode/tree/master/1283-find-the-smallest-divisor-given-a-threshold) |
 | [1365-how-many-numbers-are-smaller-than-the-current-number](https://github.com/sarthak231020/LeetCode/tree/master/1365-how-many-numbers-are-smaller-than-the-current-number) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/sarthak231020/LeetCode/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
+| [1901-find-a-peak-element-ii](https://github.com/sarthak231020/LeetCode/tree/master/1901-find-a-peak-element-ii) |
 ## Queue
 |  |
 | ------- |
@@ -138,11 +139,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1004-max-consecutive-ones-iii](https://github.com/sarthak231020/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1283-find-the-smallest-divisor-given-a-threshold](https://github.com/sarthak231020/LeetCode/tree/master/1283-find-the-smallest-divisor-given-a-threshold) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/sarthak231020/LeetCode/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
+| [1901-find-a-peak-element-ii](https://github.com/sarthak231020/LeetCode/tree/master/1901-find-a-peak-element-ii) |
 ## Matrix
 |  |
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/sarthak231020/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0240-search-a-2d-matrix-ii](https://github.com/sarthak231020/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
+| [1901-find-a-peak-element-ii](https://github.com/sarthak231020/LeetCode/tree/master/1901-find-a-peak-element-ii) |
 ## Linked List
 |  |
 | ------- |
