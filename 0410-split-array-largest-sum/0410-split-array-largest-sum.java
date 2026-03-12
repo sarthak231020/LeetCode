@@ -7,9 +7,9 @@ class Solution {
         int parts = 1;
         for(int i=0;i<n;i++)
         {
-            if(sum + (long)nums[i] <= mid)
+            if(sum + nums[i] <= mid)
             {
-                sum += (long)(nums[i]);
+                sum += nums[i];
             }
             else
             {
@@ -22,10 +22,12 @@ class Solution {
     }
 
     public int splitArray(int[] nums, int k) {
-        if(nums.length == k) 
-            return Arrays.stream(nums).max().getAsInt();
-        int low = Arrays.stream(nums).max().getAsInt(), high = Arrays.stream(nums).sum();
-        int ans = -1;
+        int low = nums[0],high = 0;
+        for(int i : nums) 
+        {
+            low = Math.max(low,i);
+            high += i;
+        }
         while(low <= high) 
         {
             int mid = low + (high - low)/2;
