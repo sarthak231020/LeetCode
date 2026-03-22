@@ -16,21 +16,20 @@ class Solution {
         int n = s.length();
         if(k > n) 
             return false;
-        int[] freq = new int[(int)Math.pow(2,k)];
+        // int[] freq = new int[(int)Math.pow(2,k)]; // For brut
         int i = 0, j = 0;
+        Set<String> st = new HashSet<>();
 
         while(j < n) 
         {
             if(j-i+1 == k) 
             {
-                freq[convertToDecimal(s.substring(i,j+1))]++;
+                // freq[convertToDecimal(s.substring(i,j+1))]++; // For Brut
+                st.add(s.substring(i,j+1));
                 i++;
             }
             j++;
         }
-        for(int ele:freq) 
-            if(ele == 0)
-                return false;
-        return true;
+        return st.size() == (int)Math.pow(2,k);
     }
 }
