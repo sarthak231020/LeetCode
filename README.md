@@ -14,6 +14,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0621-task-scheduler](https://github.com/sarthak231020/LeetCode/tree/master/0621-task-scheduler) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1365-how-many-numbers-are-smaller-than-the-current-number](https://github.com/sarthak231020/LeetCode/tree/master/1365-how-many-numbers-are-smaller-than-the-current-number) |
+| [3679-minimum-discards-to-balance-inventory](https://github.com/sarthak231020/LeetCode/tree/master/3679-minimum-discards-to-balance-inventory) |
 ## String
 |  |
 | ------- |
@@ -30,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0567-permutation-in-string](https://github.com/sarthak231020/LeetCode/tree/master/0567-permutation-in-string) |
 | [1004-max-consecutive-ones-iii](https://github.com/sarthak231020/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/sarthak231020/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
+| [3679-minimum-discards-to-balance-inventory](https://github.com/sarthak231020/LeetCode/tree/master/3679-minimum-discards-to-balance-inventory) |
 ## Two Pointers
 |  |
 | ------- |
@@ -70,6 +72,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/sarthak231020/LeetCode/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/sarthak231020/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [1901-find-a-peak-element-ii](https://github.com/sarthak231020/LeetCode/tree/master/1901-find-a-peak-element-ii) |
+| [3679-minimum-discards-to-balance-inventory](https://github.com/sarthak231020/LeetCode/tree/master/3679-minimum-discards-to-balance-inventory) |
 ## Queue
 |  |
 | ------- |
@@ -106,6 +109,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0347-top-k-frequent-elements](https://github.com/sarthak231020/LeetCode/tree/master/0347-top-k-frequent-elements) |
 | [0621-task-scheduler](https://github.com/sarthak231020/LeetCode/tree/master/0621-task-scheduler) |
 | [1365-how-many-numbers-are-smaller-than-the-current-number](https://github.com/sarthak231020/LeetCode/tree/master/1365-how-many-numbers-are-smaller-than-the-current-number) |
+| [3679-minimum-discards-to-balance-inventory](https://github.com/sarthak231020/LeetCode/tree/master/3679-minimum-discards-to-balance-inventory) |
 ## Stack
 |  |
 | ------- |
@@ -281,4 +285,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0410-split-array-largest-sum](https://github.com/sarthak231020/LeetCode/tree/master/0410-split-array-largest-sum) |
+## Simulation
+|  |
+| ------- |
+| [3679-minimum-discards-to-balance-inventory](https://github.com/sarthak231020/LeetCode/tree/master/3679-minimum-discards-to-balance-inventory) |
 <!---LeetCode Topics End-->
