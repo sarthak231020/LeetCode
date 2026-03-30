@@ -21,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0020-valid-parentheses](https://github.com/sarthak231020/LeetCode/tree/master/0020-valid-parentheses) |
 | [0076-minimum-window-substring](https://github.com/sarthak231020/LeetCode/tree/master/0076-minimum-window-substring) |
+| [0151-reverse-words-in-a-string](https://github.com/sarthak231020/LeetCode/tree/master/0151-reverse-words-in-a-string) |
 | [0424-longest-repeating-character-replacement](https://github.com/sarthak231020/LeetCode/tree/master/0424-longest-repeating-character-replacement) |
 | [0567-permutation-in-string](https://github.com/sarthak231020/LeetCode/tree/master/0567-permutation-in-string) |
 | [1021-remove-outermost-parentheses](https://github.com/sarthak231020/LeetCode/tree/master/1021-remove-outermost-parentheses) |
@@ -41,6 +42,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0019-remove-nth-node-from-end-of-list](https://github.com/sarthak231020/LeetCode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0141-linked-list-cycle](https://github.com/sarthak231020/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0143-reorder-list](https://github.com/sarthak231020/LeetCode/tree/master/0143-reorder-list) |
+| [0151-reverse-words-in-a-string](https://github.com/sarthak231020/LeetCode/tree/master/0151-reverse-words-in-a-string) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/sarthak231020/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0567-permutation-in-string](https://github.com/sarthak231020/LeetCode/tree/master/0567-permutation-in-string) |
 ## Array
