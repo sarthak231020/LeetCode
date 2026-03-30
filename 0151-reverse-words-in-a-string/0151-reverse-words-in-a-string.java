@@ -20,8 +20,12 @@ class Solution {
         }
         StringBuilder ans = new StringBuilder();
         for(int k=0;k<ind;k++)
-            ans.append(splitStrs[k] + " ");
-        return ans.toString().trim();
+        {
+            ans.append(splitStrs[k]);
+            if(k != ind-1) 
+                ans.append(" ");
+        }
+        return ans.toString();
     }
     public String reverseWords(String s) {
         return brut(s);
