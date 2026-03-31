@@ -1,7 +1,8 @@
 class Solution {
-    public boolean isIsomorphic(String s, String t) {
-        if(s.length() != t.length()) 
-            return false;
+
+    public boolean brut(String s,String t) 
+    {
+        // Length are same mentioned already.
         Map<Character,Character> mapping = new HashMap<>();
         for(int i=0;i<s.length();i++) 
         {
@@ -32,5 +33,30 @@ class Solution {
         }
         
         return true;
+    }
+
+    public boolean optimal(String s,String t) 
+    {
+        // Length are same mentioned already.
+        int[] seen1 = new int[256];
+        int[] seen2 = new int[256];
+        int n = s.length();
+        // Update position and check whether both chars have same positions
+        // Positions we are updating to avoid 0(default).
+        for(int i=0;i<n;i++) 
+        {
+            char ch1 = s.charAt(i);
+            char ch2 = t.charAt(i);
+            if(seen1[ch1] != seen2[ch2])
+                return false;
+            seen1[ch1] = i+1;
+            seen2[ch2] = i+1;
+        }
+
+        return true;
+    }
+
+    public boolean isIsomorphic(String s, String t) {
+        return optimal(s,t);
     }
 }
