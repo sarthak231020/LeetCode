@@ -50,6 +50,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0143-reorder-list](https://github.com/sarthak231020/LeetCode/tree/master/0143-reorder-list) |
 | [0151-reverse-words-in-a-string](https://github.com/sarthak231020/LeetCode/tree/master/0151-reverse-words-in-a-string) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/sarthak231020/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
+| [0189-rotate-array](https://github.com/sarthak231020/LeetCode/tree/master/0189-rotate-array) |
 | [0567-permutation-in-string](https://github.com/sarthak231020/LeetCode/tree/master/0567-permutation-in-string) |
 ## Array
 |  |
@@ -66,6 +67,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0162-find-peak-element](https://github.com/sarthak231020/LeetCode/tree/master/0162-find-peak-element) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/sarthak231020/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0169-majority-element](https://github.com/sarthak231020/LeetCode/tree/master/0169-majority-element) |
+| [0189-rotate-array](https://github.com/sarthak231020/LeetCode/tree/master/0189-rotate-array) |
 | [0215-kth-largest-element-in-an-array](https://github.com/sarthak231020/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0239-sliding-window-maximum](https://github.com/sarthak231020/LeetCode/tree/master/0239-sliding-window-maximum) |
 | [0240-search-a-2d-matrix-ii](https://github.com/sarthak231020/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
@@ -145,6 +147,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0150-evaluate-reverse-polish-notation](https://github.com/sarthak231020/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
+| [0189-rotate-array](https://github.com/sarthak231020/LeetCode/tree/master/0189-rotate-array) |
 | [0973-k-closest-points-to-origin](https://github.com/sarthak231020/LeetCode/tree/master/0973-k-closest-points-to-origin) |
 ## Monotonic Stack
 |  |
