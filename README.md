@@ -75,6 +75,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0347-top-k-frequent-elements](https://github.com/sarthak231020/LeetCode/tree/master/0347-top-k-frequent-elements) |
 | [0410-split-array-largest-sum](https://github.com/sarthak231020/LeetCode/tree/master/0410-split-array-largest-sum) |
 | [0540-single-element-in-a-sorted-array](https://github.com/sarthak231020/LeetCode/tree/master/0540-single-element-in-a-sorted-array) |
+| [0542-01-matrix](https://github.com/sarthak231020/LeetCode/tree/master/0542-01-matrix) |
 | [0621-task-scheduler](https://github.com/sarthak231020/LeetCode/tree/master/0621-task-scheduler) |
 | [0739-daily-temperatures](https://github.com/sarthak231020/LeetCode/tree/master/0739-daily-temperatures) |
 | [0853-car-fleet](https://github.com/sarthak231020/LeetCode/tree/master/0853-car-fleet) |
@@ -181,6 +182,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/sarthak231020/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0240-search-a-2d-matrix-ii](https://github.com/sarthak231020/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
+| [0542-01-matrix](https://github.com/sarthak231020/LeetCode/tree/master/0542-01-matrix) |
 | [1901-find-a-peak-element-ii](https://github.com/sarthak231020/LeetCode/tree/master/1901-find-a-peak-element-ii) |
 ## Linked List
 |  |
@@ -263,6 +265,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/sarthak231020/LeetCode/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0226-invert-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0226-invert-binary-tree) |
+| [0542-01-matrix](https://github.com/sarthak231020/LeetCode/tree/master/0542-01-matrix) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1448-count-good-nodes-in-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## Binary Tree
@@ -310,6 +313,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0410-split-array-largest-sum](https://github.com/sarthak231020/LeetCode/tree/master/0410-split-array-largest-sum) |
+| [0542-01-matrix](https://github.com/sarthak231020/LeetCode/tree/master/0542-01-matrix) |
 ## Simulation
 |  |
 | ------- |
