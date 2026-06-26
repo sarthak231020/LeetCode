@@ -85,6 +85,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0973-k-closest-points-to-origin](https://github.com/sarthak231020/LeetCode/tree/master/0973-k-closest-points-to-origin) |
 | [1004-max-consecutive-ones-iii](https://github.com/sarthak231020/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1046-last-stone-weight](https://github.com/sarthak231020/LeetCode/tree/master/1046-last-stone-weight) |
+| [1091-shortest-path-in-binary-matrix](https://github.com/sarthak231020/LeetCode/tree/master/1091-shortest-path-in-binary-matrix) |
 | [1283-find-the-smallest-divisor-given-a-threshold](https://github.com/sarthak231020/LeetCode/tree/master/1283-find-the-smallest-divisor-given-a-threshold) |
 | [1365-how-many-numbers-are-smaller-than-the-current-number](https://github.com/sarthak231020/LeetCode/tree/master/1365-how-many-numbers-are-smaller-than-the-current-number) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/sarthak231020/LeetCode/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
@@ -187,6 +188,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0200-number-of-islands](https://github.com/sarthak231020/LeetCode/tree/master/0200-number-of-islands) |
 | [0240-search-a-2d-matrix-ii](https://github.com/sarthak231020/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0542-01-matrix](https://github.com/sarthak231020/LeetCode/tree/master/0542-01-matrix) |
+| [1091-shortest-path-in-binary-matrix](https://github.com/sarthak231020/LeetCode/tree/master/1091-shortest-path-in-binary-matrix) |
 | [1901-find-a-peak-element-ii](https://github.com/sarthak231020/LeetCode/tree/master/1901-find-a-peak-element-ii) |
 ## Linked List
 |  |
@@ -281,6 +283,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0542-01-matrix](https://github.com/sarthak231020/LeetCode/tree/master/0542-01-matrix) |
 | [0802-find-eventual-safe-states](https://github.com/sarthak231020/LeetCode/tree/master/0802-find-eventual-safe-states) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
+| [1091-shortest-path-in-binary-matrix](https://github.com/sarthak231020/LeetCode/tree/master/1091-shortest-path-in-binary-matrix) |
 | [1448-count-good-nodes-in-binary-tree](https://github.com/sarthak231020/LeetCode/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## Binary Tree
 |  |
