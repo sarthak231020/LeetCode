@@ -18,19 +18,21 @@ class Solution {
         int i = 0, j = 0, minLen = Integer.MAX_VALUE, n = s.length();
         int subCount = 0,mainCounter=0;
         int[] minWin = new int[2];
-        Map<Character,Integer> strMap = new HashMap<>();
-        Map<Character,Integer> subStrMap = new HashMap<>();
+       // Map<Character,Integer> strMap = new HashMap<>();
+        int[] strMap = new int[128];
+        //Map<Character,Integer> subStrMap = new HashMap<>();
+        int[] subStrMap = new int[128];
         for(char ch:t.toCharArray()){
-            if(subStrMap.getOrDefault(ch,0)==0)
+            if(subStrMap[ch-'A']==0)
                 subCount++;
-            subStrMap.put(ch,subStrMap.getOrDefault(ch,0)+1);
+            subStrMap[ch-'A']++;
         }
         System.out.println(subCount);
         while(j < n)
         {
             char rc = s.charAt(j);
-            strMap.put(rc,strMap.getOrDefault(rc,0)+1);
-            if(subStrMap.containsKey(rc) && strMap.get(rc).equals(subStrMap.get(rc)))
+            strMap[rc-'A']++;
+            if(subStrMap[rc-'A']>0 && (strMap[rc-'A']==subStrMap[rc-'A']))
                 mainCounter++;
             System.out.println(mainCounter);
             while(subCount==mainCounter)
@@ -42,11 +44,9 @@ class Solution {
                     minWin[1] = j;
                 }
                 char lc = s.charAt(i);
-                strMap.put(lc,strMap.getOrDefault(lc,0)-1);
-                if( subStrMap.containsKey(lc)  && strMap.get(lc)<subStrMap.get(lc))
+                strMap[lc-'A']--;
+                if( subStrMap[lc-'A']>0  && strMap[lc-'A']<subStrMap[lc-'A'])
                     mainCounter--;
-                if(strMap.get(lc) == 0) 
-                    strMap.remove(lc);
                 i++;
             }
             j++;
