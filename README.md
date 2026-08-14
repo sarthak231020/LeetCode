@@ -62,6 +62,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0033-search-in-rotated-sorted-array](https://github.com/sarthak231020/LeetCode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/sarthak231020/LeetCode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
 | [0035-search-insert-position](https://github.com/sarthak231020/LeetCode/tree/master/0035-search-insert-position) |
+| [0048-rotate-image](https://github.com/sarthak231020/LeetCode/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/sarthak231020/LeetCode/tree/master/0054-spiral-matrix) |
 | [0074-search-a-2d-matrix](https://github.com/sarthak231020/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0081-search-in-rotated-sorted-array-ii](https://github.com/sarthak231020/LeetCode/tree/master/0081-search-in-rotated-sorted-array-ii) |
@@ -161,6 +162,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0048-rotate-image](https://github.com/sarthak231020/LeetCode/tree/master/0048-rotate-image) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/sarthak231020/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0189-rotate-array](https://github.com/sarthak231020/LeetCode/tree/master/0189-rotate-array) |
 | [0973-k-closest-points-to-origin](https://github.com/sarthak231020/LeetCode/tree/master/0973-k-closest-points-to-origin) |
@@ -194,6 +196,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Matrix
 |  |
 | ------- |
+| [0048-rotate-image](https://github.com/sarthak231020/LeetCode/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/sarthak231020/LeetCode/tree/master/0054-spiral-matrix) |
 | [0074-search-a-2d-matrix](https://github.com/sarthak231020/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0130-surrounded-regions](https://github.com/sarthak231020/LeetCode/tree/master/0130-surrounded-regions) |
